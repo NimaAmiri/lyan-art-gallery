@@ -1,0 +1,31 @@
+<style>
+  .shape{
+    text-align:auto;
+    background-color:transparent;
+    width:200px;
+    height:60px relative;
+    line-height:60px relative;
+    color:#2e0808;
+    margin:10px auto;
+    position:relative;
+  }
+  .shape:before{
+    content:"";
+    width:0px relative;
+    height:0px relative;
+    border-top:6px relative #f2ebeb;
+    border-left:6px relative transparent;
+    position:absolute;
+    right:100%;
+    top:0px;
+  }
+  
+</style>
+
+<div class="border-bottom row pb-1">
+  <div class="col-9">
+    <div><img src="static/images/{{work['images_id']}}.jpg" title="{{work['description']}}" class="rounded float-start" {% if 'description' in work %}figcaption={{work['description']}}{% endif %} width="100" height="100"></div>
+    <div class="shape"><h5>{{work['description']}}</h5></div>
+  </div>
+  <br/>
+</div>

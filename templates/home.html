@@ -12,7 +12,7 @@
           font-family: sans-serif;
           margin: 0.1;
           padding: 0;
-          class="text-center";
+          class="auto";
         }
 
         header {
@@ -28,24 +28,6 @@
         main {
           margin: 20px;
         }
-
-        .mt-0 {
-          margin-top: 0 !important;
-        }
-
-        .ms-1 {
-          margin-left: ($spacer * .25) !important;
-        }
-
-        .px-2 {
-          padding-left: ($spacer * .5) !important;
-          padding-right: ($spacer * .5) !important;
-        }
-
-        .p-3 {
-          padding: $spacer !important;
-        }
-
         .gallery {
           display: flex;
           flex-wrap: wrap;
@@ -55,6 +37,12 @@
         .gallery img {
           margin: 10px;
           max-width: 300px;
+        }
+
+        .shape{
+          -webkit-box-shadow:0px 0px 104px 21px rgba(163,148,148,0.58);
+          -moz-box-shadow: 0px 0px 104px 21px rgba(163,148,148,0.58);
+          box-shadow: 0px 0px 104px 21px rgba(163,148,148,0.58);
         }
 
         footer {
@@ -78,7 +66,7 @@
         }
       </style>
     </head>
-    <boby class="text-start mt-4 ms-1">
+    <boby class="text-start ps-3">
       <h1>Lyan Art Gallery</h1>
       <img id="banner" src="/static/images/index.jpg" width="320" height="320">
       <h2>About Us</h2>
@@ -92,9 +80,24 @@
 
       Neque vivamus rutrum fermentum leo tempus nascetur consectetur nullam. Blandit fames id finibus quis ridiculus auctor egestas. Nibh sapien mi et arcu, ligula phasellus inceptos. Eget sodales platea per dignissim euismod taciti habitasse. Sociosqu dui aliquam faucibus sed sem sem bibendum hac. Eros nisi ut quis sed; volutpat hac eget. Hac interdum elit mollis justo nam sit tincidunt. Aptent vel facilisi ultricies amet tortor.</p>
       <h2>Arts</h2>
-      <p>Hier werden Arts angezeigt</p>
+      <div class="ms-2 ps-2 mt-1 pt-1 mb-1 pb-1">
+        {% for work in works %}
+          <div>
+            <h5><a id="{{work.images_id}}" href="{{work['img_url']}}">{{work['title']}}</a></h5>
+          </div>
+          <div>Created on: {{work['year']}}
+          </div>
+          <div>{% include 'images.html' %}</div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        {% endfor %}
+      </div>
       <h2>Ideen</h2>
       <p>Hier werden Ideen angezeigt, hier kann man sein Idee uploaden</p>
-      <button type="button" class="btn btn-primary">Kontakt</button> 
+      <button type="button" class="btn btn-primary"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Kontakt</button> 
     </boby>
   </html>
