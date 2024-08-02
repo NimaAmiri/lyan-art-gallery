@@ -48,9 +48,13 @@ def index():
     return render_template('home.html', works=WORKS)
 
 
-@app.route('/api/ works')
+@app.route('/api/works')
 def art_list():
     return jsonify(WORKS)
+
+@app.route('/about',methods=['GET', 'POST'])
+def about():
+    return render_template('about.html')
 
 
 if __name__ == '__main__':
