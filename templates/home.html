@@ -12,7 +12,7 @@
           background-color: #f2ebeb;
           font-family: sans-serif;
           margin: 0.1;
-          padding: 0;
+          padding: 0.1;
           class="auto";
         }
 
@@ -72,18 +72,29 @@
      
       <h1></h1>
       <img id="banner" src="/static/images/index.jpg" width="320" height="320">
-      <h2>About Us</h2>
-      <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Aliquam vestibulum porttitor enim platea conubia. Nunc ullamcorper per ultricies auctor dolor posuere faucibus. Torquent malesuada et imperdiet dictumst risus? Nostra primis vitae consequat enim quis. Hac auctor placerat euismod; eros tellus quisque sit aenean nam.
+      <h2 class="ms-2 me-2">Philosophie</h2>
+      <p class="ms-4 me-3 bodytext">
+      - <b>Art of Design:</b><br/>
+        Design ist mehr als nur das Gestalten von Oberflächen. Es ist die Kunst, Form und Funktion in Einklang zu bringen und dabei sowohl ästhetische als auch praktische Anforderungen zu erfüllen. Ein gutes Design vereint Schönheit und Zweckmäßigkeit, es spricht unsere Sinne an und erleichtert unseren Alltag.<br/><br/>
 
-      Duis proin mattis vitae himenaeos rutrum metus ac nisi. Dui sapien tempus risus cras nisi natoque eleifend. Potenti eros inceptos sagittis vel fusce potenti. Diam luctus ornare vel ante eget eu bibendum magna elit. Facilisi cras blandit cras laoreet sit non velit inceptos dolor. Aenean cursus malesuada sodales porttitor fusce eros conubia et. Quam inceptos nascetur nec vel, bibendum cursus.
+      - <b>Ästhetik und Funktionalität:</b><br/>
 
-      Proin laoreet natoque et lorem dapibus interdum suspendisse conubia. Natoque neque aptent nullam accumsan quis. Maximus cubilia torquent proin risus vehicula commodo maximus. Consectetur erat faucibus mi potenti nunc mi eros nascetur suscipit. Eget curabitur facilisis sem nibh commodo malesuada justo feugiat faucibus? Aliquam nullam augue finibus nulla ligula lacus et. Maximus penatibus luctus molestie maximus neque laoreet etiam commodo bibendum.
+        Die ästhetische Komponente eines Designs bezieht sich auf seine visuelle Anziehungskraft. Farben, Formen und Materialien werden sorgfältig ausgewählt, um eine ansprechende Optik zu erzeugen. Doch ein schönes Design allein reicht nicht aus. Es muss auch funktional sein und den Bedürfnissen der Nutzer entsprechen. Ergonomische Gestaltung, intuitive Bedienbarkeit und Langlebigkeit sind wesentliche Aspekte, die ein gelungenes Design ausmachen.<br/><br/>
 
-      Consectetur inceptos nam odio curabitur vel lacus penatibus luctus. Tellus nam pellentesque tempus cras nam dictum. Bibendum fusce sed mauris conubia magnis nisl auctor lacus. Porttitor mus viverra orci vulputate vulputate non. At quam elementum risus augue viverra. Cubilia mollis odio inceptos risus sem consequat donec.
+      - <b>Kreativität und Innovation:</b><br/>
 
-      Neque vivamus rutrum fermentum leo tempus nascetur consectetur nullam. Blandit fames id finibus quis ridiculus auctor egestas. Nibh sapien mi et arcu, ligula phasellus inceptos. Eget sodales platea per dignissim euismod taciti habitasse. Sociosqu dui aliquam faucibus sed sem sem bibendum hac. Eros nisi ut quis sed; volutpat hac eget. Hac interdum elit mollis justo nam sit tincidunt. Aptent vel facilisi ultricies amet tortor.</p>
-      <h2>Arts</h2>
-      <div class="ms-2 ps-2 mt-1 pt-1 mb-1 pb-1">
+        Gutes Design erfordert Kreativität und den Mut, neue Wege zu gehen. Designer sind ständig auf der Suche nach innovativen Lösungen, die Probleme lösen und neue Standards setzen. Dabei ist es wichtig, traditionelle Ansätze zu hinterfragen und unkonventionelle Ideen zu entwickeln. Die Kombination von bewährten Methoden mit frischen, kreativen Ansätzen führt zu einzigartigen und inspirierenden Ergebnissen.<br/><br/>
+
+      - <b>Nachhaltigkeit und Verantwortung:</b><br/>
+
+        In der heutigen Zeit gewinnt der Aspekt der Nachhaltigkeit im Design zunehmend an Bedeutung. Designer tragen eine Verantwortung gegenüber der Umwelt und der Gesellschaft. Nachhaltiges Design bedeutet, Materialien und Prozesse zu wählen, die umweltfreundlich sind, und Produkte zu schaffen, die langlebig und recycelbar sind. So kann Design dazu beitragen, die Ressourcen unseres Planeten zu schonen und eine nachhaltigere Zukunft zu gestalten.<br/><br/>
+
+      - <b>Die Rolle des Designers:</b><br/>
+
+        Designer sind Problemlöser und Visionäre. Sie verstehen die Bedürfnisse und Wünsche der Menschen und setzen ihr Wissen und ihre Kreativität ein, um innovative Lösungen zu entwickeln. Ein Designer muss in der Lage sein, interdisziplinär zu denken und mit verschiedenen Fachbereichen zusammenzuarbeiten, um ganzheitliche und durchdachte Konzepte zu erstellen.
+      </p>
+      <h2 class="ms-2 me-2">Arts</h2>
+      <div class="ms-2 me-2 ps-2 mt-1 pt-1 mb-1 pb-1 bodytext">
         {% for work in works %}
           <div>
             <h5><a id="{{work.images_id}}" href="{{work['img_url']}}">{{work['title']}}</a></h5>
@@ -98,8 +109,8 @@
         <br/>
         {% endfor %}
       </div>
-      <h2>Ideen</h2>
-      <p>Hier werden Ideen angezeigt, hier kann man sein Idee uploaden</p>
+      <h2 class="ms-2 me-2">Ideen</h2>
+      <p class="ms-3 me-3 bodytext">Hier werden Ideen angezeigt, hier kann man sein Idee uploaden</p>
     </body>
     {% include 'footer.html' %}
   </html>
