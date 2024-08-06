@@ -10,6 +10,7 @@ packages = [{include = "repl_nix_lyan_art_gallery"}]
 python = "^3.12"
 flask = "^3.0.3"
 path = "^17.0.0"
+cs50 = "^9.3.4"
 
 
 [build-system]

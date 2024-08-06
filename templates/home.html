@@ -97,9 +97,11 @@
       <div class="ms-2 me-2 ps-2 mt-1 pt-1 mb-1 pb-1 bodytext">
         {% for work in works %}
           <div>
-            <h5><a id="{{work.images_id}}" href="{{work['img_url']}}">{{work['title']}}</a></h5>
+            <h5><a id="{{work[2]}}" href="{{work[5]}}">{{work[1]}}</a></h5>
           </div>
-          <div>Created on: {{work['year']}}
+          <div>Created on: {{work[3]}}
+          </div>
+          <div>Artist: {{work[6]}}            
           </div>
           <div>{% include 'images.html' %}</div>
         <br/>

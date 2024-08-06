@@ -1,31 +1,63 @@
 <style>
+  .triangle-with-partial-borders {
+    border: 1px solid #333;
+    padding: 1.5em;
+    position: relative;
+    width: 50px;
+  }
+  .triangle-with-partial-borders:before,
+  .triangle-with-partial-borders:after {
+    content: "";
+    display: block;
+    height: 0; 
+    left: 50%;
+    position: absolute;
+    width: 0; 
+  }
+  .triangle-with-partial-borders:before {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 6px solid red;
+    margin-left: -5px;
+    top: -6px;
+    z-index: 4;
+  }
+  .triangle-with-partial-borders:after {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 5px solid #fff;
+    margin-left: -3px;
+    top: -5px;
+    z-index: 5;
+  }
+  
   .shape{
-    text-align:auto;
-    background-color:transparent;
-    width:200px;
-    height:60px relative;
-    line-height:60px relative;
-    color:#2e0808;
-    margin:10px auto;
+    text-align:left;
+    background-color:relative;
+    width:200px relativ;
+    line-height:6px relative;
+    color:#2e0808; /*#2e0808*/
+    margin:auto;
     position:relative;
   }
   .shape:before{
     content:"";
     width:0px relative;
     height:0px relative;
-    border-top:6px relative #f2ebeb;
+    border-top:6px relative;/*#f2ebeb*/
     border-left:6px relative transparent;
     position:absolute;
     right:100%;
     top:0px;
   }
-  
+  /*border-bottom row pb-1*/
 </style>
 
-<div class="border-bottom row pb-1">
-  <div class="col-9">
-    <div><img src="static/images/{{work['images_id']}}.jpg" title="{{work['description']}}" class="rounded float-start" {% if 'description' in work %}figcaption={{work['description']}}{% endif %} width="100" height="100"></div>
-    <div class="shape"><h5>{{work['description']}}</h5></div>
+<div class="shape"> 
+  <div class="shape">
+    <div><img src="static/images/{{work[2]}}.jpg" title="{{work[4]}}" class="rounded float-start" 
+           {% if work[4] in work %}figcaption={{work[4]}}{% endif %} width="100" height="100"></div>
+    <div class="shape"><h5>{{work[4]}}</h5></div>
   </div>
   <br/>
 </div>
